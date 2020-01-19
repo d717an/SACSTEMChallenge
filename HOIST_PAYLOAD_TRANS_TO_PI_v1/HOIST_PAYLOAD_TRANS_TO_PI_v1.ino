@@ -1,23 +1,27 @@
+/*
+CONFIGURATION
 
+               Teensy LC OR
+  NRF24L01+ <> ARDUINO PRO MINI <> MPU6050
+  GND          GND                 GND
+  3V3          3V3                 VCC
+  CE           D9
+  CSN          D10
+  SCK          D13(sck)
+  MOSI         D11(mosi)
+  MISO         D12 (miso)
+  IRQ (n/s)
+               A4 (SDA)           SDA
+               A5 (SCL)           SCL
+*/
 
 #include<SPI.h>
 #include<Wire.h>
 #include<RF24.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
-// configuration:
-//NRF24L01+ <> ARDUINO PRO MINI <> MPU6050
-//GND          GND                 GND
-//3V3          3V3                 VCC
-//CE           D9
-//CSN          D10
-//SCK          D13(sck)
-//MOSI         D11(mosi)
-//MISO         D12 (miso)
-//IRQ (n/s)
-//             A4 (SDA)           SDA
-//             A5 (SCL)           SCL
-//
+
+
 
 const int MPU_ADDR = 0x68; // I2C address of the MPU-6050. If AD0 pin is set to HIGH, the I2C address will be 0x69.
 
